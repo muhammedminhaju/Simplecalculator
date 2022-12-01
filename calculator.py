@@ -28,23 +28,35 @@ def design2():
     b=int(input("||{}||=>".format("Enter the 2nd number ".center(40))))
     print("||{}||".format(line))
     return a,b,op
-  
+def outputdesign(w,r):
+    line="----------------------------------------".center(40)
+    print("||{}||".format(" ".center(40)))
+    print("||{}||".format(w.center(40)))
+    print("||{}||".format(r.center(40)))
+    print("||{}||".format(line.center(40)))
 def sum(a,b):
-  print("Addition ",a+b)
+  w="Addition"
+  r="%d+%d=%d"%(a,b,a+b)
+  outputdesign(w,r)
 def sub(a,b):
-  print("Subtraction ",a-b)
+  w="Subtraction"
+  r="%d-%d=%d"%(a,b,a-b)
+  outputdesign(w,r)
 def mul(a,b):
-  print("Multiplication ",a*b)
+  w="Multiplication"
+  r="%d*%d=%d"%(a,b,a*b)
+  outputdesign(w,r)
 def div(a,b):
-  print("Division ",a/b)
+  w="Division"
+  r="%d/%d=%d"%(a,b,a/b)
+  outputdesign(w,r)
 def mod(a,b):
-  print("Modulo ",a%b)  
+  w="Modulo"
+  r="{}%{}={}".format(a,b,a%b)
+#   r="%d'/%'%d=%d"%(a,b,a%b)
+  outputdesign(w,r)
 s=design1() 
 a,b,op=design2()       
-# a=input("Enter the 1st number ")
-# a=int(a)
-# op=input("Enter the Operator ")
-# b=int(input("Enter the 2nd numder "))
 while (s=="start"):
     if(op=="+"):
       sum(a,b)
@@ -58,9 +70,6 @@ while (s=="start"):
      mod(a,b) 
     s=design1()
     if(s=="start"):
-        a=input("Enter the 1st number ")
-        a=int(a)
-        op=input("Enter the Operator ")
-        b=int(input("Enter the 2nd numder ")) 
+      a,b,op=design2()
 
 
