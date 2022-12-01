@@ -55,19 +55,25 @@ def mod(a,b):
   r="{}%{}={}".format(a,b,a%b)
 #   r="%d'/%'%d=%d"%(a,b,a%b)
   outputdesign(w,r)
+def choicecaculation(a,b,op):
+    if(op=="+"):
+        sum(a,b)
+    elif(op=="-"):
+        sub(a,b)  
+    elif(op=="/"):
+        div(a,b)
+    elif(op=="*"):
+        mul(a,b)  
+    elif(op=="%"):
+        mod(a,b)    
+
+     
+
+
 s=design1() 
 a,b,op=design2()       
 while (s=="start"):
-    if(op=="+"):
-      sum(a,b)
-    elif(op=="-"):
-     sub(a,b)  
-    elif(op=="/"):
-     div(a,b)
-    elif(op=="*"):
-     mul(a,b)  
-    elif(op=="%"):
-     mod(a,b) 
+    choicecaculation(a,b,op)
     s=design1()
     if(s=="start"):
       a,b,op=design2()
